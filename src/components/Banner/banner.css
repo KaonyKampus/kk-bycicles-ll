@@ -1,0 +1,11 @@
+
+.box__banner{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.box__image{
+    width: 80%;
+    border-radius: 1rem 1rem 1rem 1rem;
+}

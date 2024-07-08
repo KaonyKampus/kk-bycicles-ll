@@ -1,0 +1,5 @@
+
+.car__widget{
+    display: flex;
+    flex-direction: row;
+}
