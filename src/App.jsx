@@ -8,6 +8,7 @@ import Footer from './components/Footer/FooterCompo'
 import './App.css'
 
 function App() {
+  
 
 
   return (
@@ -15,7 +16,7 @@ function App() {
     <div className='app'>
         <NavBar/>
         <Banner/>
-        <ItemListContainer/>
+        <ItemListContainer greeting ="Bienvenidos a KK-Bycicles"/>
     </div>
     <Footer/>
     </>
