@@ -37,7 +37,6 @@ export default function ItemListContainer({greeting}){
                                         <p className='precio__card'>$ {producto.precio}</p>
                                         <ItemCount/>  
                                         <button className='product__button'>Agregar al carrito</button>
-                      
                                 </div>
                             ))
                             }                                   
