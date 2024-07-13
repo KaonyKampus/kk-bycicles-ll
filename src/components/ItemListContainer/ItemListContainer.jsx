@@ -2,6 +2,7 @@ import './itemlistcontainer.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import obtenerProductos from '../../data.js'
+import ItemCount from '../Item_count/ItemCount.jsx'
 
 
 /*falta ingresar la propiedad*/
@@ -33,11 +34,13 @@ export default function ItemListContainer({greeting}){
                                         <a className='box__image__card' href="">
                                             <img className='image__card' src={producto.imagen} alt="" />
                                         </a>
-                                        <p className='precio__card'>{producto.precio}</p>
+                                        <p className='precio__card'>$ {producto.precio}</p>
+                                        <ItemCount/>  
                                         <button className='product__button'>Agregar al carrito</button>
+                      
                                 </div>
                             ))
-                            }
+                            }                                   
                     </div>  
                 </div>
                 </>

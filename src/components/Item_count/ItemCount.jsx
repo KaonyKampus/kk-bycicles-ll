@@ -10,16 +10,16 @@ export default function ItemCount (){
 
     const disminuir = () =>{
         if(count<1){
-           setCount(count-1)
+           setCount(count - 1)
         }
     }
 
     return(
         <>
-        <div> 
-              <button onClick={incrementar}>-</button>
+        <div className='count__box'> 
+              <button  className='count__buttons'  onClick={incrementar}>+</button>
               <p>{count}</p>
-              <button onClick={disminuir}>+</button>
+              <button  className='count__buttons'  onClick={disminuir}>-</button>
         </div>
         </>
     )
