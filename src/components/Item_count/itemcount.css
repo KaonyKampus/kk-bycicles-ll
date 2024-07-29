@@ -1,21 +1,14 @@
-.count_box{
-    width: 100%;
+.count__box{
+    padding: 0.5rem;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
 
 }
 
 .count__buttons{
-    border-style: none;
+    background-color: inherit;
+    border: 1px solid black;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    cursor: pointer;
-    background-color: black;
-    color: aliceblue;
-    text-align: center;
-    text-size-adjust: 20px;
-}
-
-.count__buttons:hover{
-    background-color: rgb(27, 26, 26);
 }

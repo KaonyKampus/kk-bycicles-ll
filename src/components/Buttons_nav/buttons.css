@@ -1,28 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
-
-.nav__buttons {
-    text-decoration: none;
-}
-
 .nav_list{
-    font-family: "Chewy", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    text-shadow: -1px -1px 6px 0 rgb(122, 221, 102), 4px 4px 16px 2px rgb(92, 162, 235);
+    list-style: none;
     display: flex;
-    flex-direction: row;
     gap: 2rem;
-    text-decoration: none;
-    list-style-type: none;
+    align-items: center;
 }
 
-.nav__selectors {
-    color: #000000;
+.nav__selectors{
     text-decoration: none;
+    color: black;
+    
 }
 
-.nav__selectors:hover{
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #0048ff, 0 0 30px  #0045f2, 0 0 40px  #0048ff, 0 0 55px  #2c68ff, 0 0 75px  #2c68ff;
+
+.img_nav{
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
 }

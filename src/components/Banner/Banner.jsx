@@ -4,10 +4,8 @@ import imagen from '../../assets/banner.png'
 
 export default function Banner () {
     return(
-        <>
-        <div className='box__banner'>
-            <img className='box__image' src={imagen} alt="" />
+        <div className='box__banner1'>
+            <img className='box__image1' src={imagen} alt="" />
         </div>
-        </>
     )
 }

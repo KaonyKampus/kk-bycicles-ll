@@ -1,13 +1,22 @@
 
-.footer{
+.footer{    
+    padding-left: 1rem;
+    padding-right: 1rem ;
     background-color: black;
     display: flex;
-    justify-content: center;
-}
-.footer_box_icons{
-    padding: 1rem;
-    display: flex;
     flex-direction: row;
-    gap: 1rem;
+    align-items: center;
 }
 
+.footer_box_icons{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.footerDesing{
+    color: white;
+    padding-bottom: 0.5rem;
+}

@@ -2,46 +2,48 @@ import './itemlistcontainer.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import obtenerProductos from '../../data.js'
-import ItemCount from '../Item_count/ItemCount.jsx'
+import ItemList from '../ItemList/ItemList.jsx'
+import { useParams } from 'react-router-dom'
 
 
-/*falta ingresar la propiedad*/
-
+ 
 export default function ItemListContainer({greeting}){
             const [productos, setProductos] = useState([])
+            const {idCategoria} = useParams()         
+
 
             useEffect(()=> {
+
                 obtenerProductos()
                 .then((respuesta)=> {
-                    setProductos(respuesta)
+                    if(idCategoria){
+                        const productosFiltrados = respuesta.filter((producto) => producto.categoria === idCategoria)
+                        setProductos(productosFiltrados)
+                    }else{
+                        setProductos(respuesta)
+                    }
+
                 })
                 .catch((error)=> {
                     console.error(error)
                 })
                 .finally(()=> {
-                    console.log("Finalizó la promesa")
+                    console.log("Aqui llego la promesa")
+
                 })
-            },[])
+            }, [idCategoria])
+
+
+
+
+
+
             return(
-                <>
+    
                 <div className='main'>
                     <h1 className='main__title'>{greeting}</h1>
-                    <div className='box__main'>
-                            {
-                            productos.map((producto) => (
-                                <div className='card' key={producto.id}>
-                                        <h2 className='product__title'>{producto.nombre}</h2>
-                                        <a className='box__image__card' href="">
-                                            <img className='image__card' src={producto.imagen} alt="" />
-                                        </a>
-                                        <p className='precio__card'>$ {producto.precio}</p>
-                                        <ItemCount/>  
-                                        <button className='product__button'>Agregar al carrito</button>
-                                </div>
-                            ))
-                            }                                   
-                    </div>  
+                     <ItemList productos={productos} />
                 </div>
-                </>
+        
             )
 }

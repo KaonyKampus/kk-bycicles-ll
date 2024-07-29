@@ -1,5 +1,5 @@
 import './car.css'
-import shopping from '../../assets/icons_images/shoppingcart.png'
+import shopping from '../../assets/icons_images/carritocc4.png'
 
 export default function CarWidget (){
     return(

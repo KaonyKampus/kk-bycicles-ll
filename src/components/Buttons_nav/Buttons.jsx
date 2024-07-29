@@ -1,23 +1,31 @@
 import './buttons.css'
+import iconoK from '../../assets/icons_images/favicon.png'
+import { Link } from 'react-router-dom'
 
+
+/*verificar informacion de navlink para uso de propiedad active true or false para destacar*/
 
 export default function Buttons(){
     return(
         <>
-        <div className='nav__buttons'>
+        <div className='nav__buttons'> 
         <ul className='nav_list'>
-            <a className='nav__selectors' href="">
-                <li>Home</li>
-            </a>
-            <a className='nav__selectors' href="">
-                <li>Bicis Ruta</li>
-            </a>
-            <a className='nav__selectors' href="">
-                <li>Bicis MTB</li>
-            </a>
-            <a className='nav__selectors' href="">
+            <Link to="/" className='nav__selectors  img_nav'>
+                <li><img src={iconoK} alt="" /></li>
+            </Link>
+
+            <Link to="/categoria/ruta"  className='nav__selectors'>
+                <li>Ruta</li>
+            </Link>
+            <Link to="/categoria/montana"  className='nav__selectors' href="">
+                <li>Montaña</li>
+            </Link>
+            <Link to="/categoria/gravel" className='nav__selectors' href="">
+                <li>Gravel</li>
+            </Link>
+            <Link to="/categoria/accesorios" className='nav__selectors' href="">
                 <li>Accesorios</li>
-            </a>
+            </Link>
         </ul>
         </div>
         </>

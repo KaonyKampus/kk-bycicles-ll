@@ -1,9 +1,11 @@
 .nav__bar{
-    margin: 0%;
-    background-color: rgb(55, 111, 215);
+    background-color:rgba(255, 255, 255, 0.637);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.26);
     justify-content: space-between;
-    padding: 1rem 3rem 1rem 3rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    align-items: center;
 }

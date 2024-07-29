@@ -9,18 +9,17 @@ export default function ItemCount (){
     }
 
     const disminuir = () =>{
-        if(count<1){
+        if(count>1){
            setCount(count - 1)
         }
     }
 
     return(
-        <>
         <div className='count__box'> 
               <button  className='count__buttons'  onClick={incrementar}>+</button>
-              <p>{count}</p>
+              <p className='p__count'>{count}</p>
               <button  className='count__buttons'  onClick={disminuir}>-</button>
         </div>
-        </>
+       
     )
 }

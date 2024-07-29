@@ -22,6 +22,7 @@ export default function Footer(){
                         <img src={iconDiscord} alt="" />
                     </a>
             </div>
+            <h4 className='footerDesing'>Designed by David Silva</h4>
         </div>
         </>
     )
