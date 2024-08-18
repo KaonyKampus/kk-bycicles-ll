@@ -2,7 +2,7 @@
     padding: 0.5rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 
 }
 
@@ -11,4 +11,21 @@
     border: 1px solid black;
     padding: 0.5rem;
     border-radius: 0.5rem;
+}
+
+.count__buttons:hover{
+    background-color: rgba(0, 0, 0, 0.11);
+    cursor: pointer;
+}
+
+.anadir__carro{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: inherit;
+}
+
+.anadir__carro:hover{
+    background-color: rgba(0, 0, 0, 0.11);
 }

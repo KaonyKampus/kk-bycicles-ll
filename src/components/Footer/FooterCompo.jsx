@@ -8,6 +8,11 @@ export default function Footer(){
     return(
         <>
         <div className='footer'>
+            <div>
+                <p className='para__foot'>
+                    puedes contactarme a traves de estos canales
+                </p>
+            </div>
             <div className='footer_box_icons'>
                     <a href="">
                         <img src={iconGit} alt="" />
@@ -23,6 +28,7 @@ export default function Footer(){
                     </a>
             </div>
             <h4 className='footerDesing'>Designed by David Silva</h4>
+
         </div>
         </>
     )

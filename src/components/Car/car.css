@@ -1,0 +1,21 @@
+.car__widget{
+    text-decoration: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.034);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.car__widget:hover{
+    background-color: rgba(0, 0, 0, 0.041);
+}
+
+.cantidad__car{
+    color: black;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}

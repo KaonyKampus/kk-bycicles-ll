@@ -1,9 +1,23 @@
 import Item from "../Item/Item"
 import ItemCount from "../Item_count/ItemCount"
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext.jsx"
+import "./itemDetail.css"
+
 
 
 
 export default function  ItemDetail ({producto}){
+    const {agregarProducto} = useContext(CartContext)
+
+    const agregarAlCarrito = (contador)=>{
+        
+        const productoCarrito ={...producto, cantidad: contador}
+        
+        agregarProducto(productoCarrito)
+    }
+
+
 
     console.log("prueba: "+ producto)
     return( 
@@ -15,9 +29,8 @@ export default function  ItemDetail ({producto}){
                     <p className="parrafo__detail">{producto.descripcion}</p>
                 </div>
 
-                <ItemCount/>
+                <ItemCount stock={producto.stock} agregarAlCarrito={agregarAlCarrito}/>
 
-                <button>Añadir al carrito</button>
         </div>
        
     )

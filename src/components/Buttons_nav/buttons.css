@@ -9,10 +9,12 @@
 
 .nav__selectors{
     text-decoration: none;
-    color: black;
-    
+    color: rgba(0, 0, 0, 0.74);
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
-
 
 .img_nav{
     background-color: rgb(0, 0, 0);

@@ -2,7 +2,7 @@
 
 
 .main{
-    padding-top: 60px;
+    padding-top: 4.5rem;
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
@@ -10,7 +10,12 @@
 
 .main__title{
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: black;
 }
 
 .box__main{
@@ -41,8 +46,9 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    box-shadow: rgb(3, 89, 218) 0px 10px 10px -10px;
+    box-shadow: rgb(0, 0, 0) 0px 10px 10px -10px;
     background-color: rgba(56, 56, 56, 0.048);
+
 }
 
 .product__title{
@@ -62,6 +68,15 @@
 
 .precio__card{
     padding: 0.5rem;
+}
+
+.detalle__producto{
+    text-decoration:  none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius:0.5rem ;
 }
 
 .product__button{
