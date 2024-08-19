@@ -41,8 +41,13 @@ const Cart = () =>{
       
         <div className="container__total__price">
             <h2 className="total__">Precio Total:{precioTotal()} COP</h2>
-            <button className="vaciar" onClick={vaciarCarrito}>Vaciar Carrito</button>
+            <div className="botones__check">
+                <button className="vaciar" onClick={vaciarCarrito}>Vaciar Carrito</button>
+                <Link className="checkout"  to="/checkOut">Checkout</Link>
+            </div>
         </div>
+
+
     </div>
     )
 }

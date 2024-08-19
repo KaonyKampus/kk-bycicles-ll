@@ -11,6 +11,8 @@
 
 .car__widget:hover{
     background-color: rgba(0, 0, 0, 0.041);
+    border: 0.5px solid rgba(0, 47, 255, 0.24);
+
 }
 
 .cantidad__car{
