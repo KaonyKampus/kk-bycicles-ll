@@ -1,19 +1,48 @@
 import './itemlistcontainer.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import obtenerProductos from '../../data.js'
+/*import obtenerProductos from '../../data.js'*/
 import ItemList from '../ItemList/ItemList.jsx'
 import { useParams } from 'react-router-dom'
+import Loading from '../componente_carga/Loading.jsx'
+import { getDocs, collection, query, where} from 'firebase/firestore'
+import db from '../../db/db.js'
+
 
 
  
 export default function ItemListContainer({greeting}){
             const [productos, setProductos] = useState([])
+            const [estaCargando, setEstaCargando] = useState(false)
             const {idCategoria} = useParams()         
 
 
-            useEffect(()=> {
+            const getProducts = async () => {
+                    const productosRef = collection(db, "productos")
+                    const dataDb = await getDocs(productosRef) 
+                    const data = dataDb.docs.map((productDb) => {
+                        return{ id: productDb.id, ...productDb.data()}
+                        
+                    })
+                    setProductos(data)
+            }
 
+
+            const getProductsByCategory = async () =>{
+                const productosRef = collection(db, "productos")
+                const q = query(productosRef, where("categoria", "==", idCategoria))
+                const dataDb = await getDocs(q)
+
+                const data = dataDb.docs.map((productDb) => {
+                    return{ id: productDb.id, ...productDb.data()}
+                    
+                })
+                setProductos(data)
+            }
+
+
+
+              /*  setEstaCargando(true)
                 obtenerProductos()
                 .then((respuesta)=> {
                     if(idCategoria){
@@ -22,15 +51,23 @@ export default function ItemListContainer({greeting}){
                     }else{
                         setProductos(respuesta)
                     }
-
                 })
                 .catch((error)=> {
                     console.error(error)
                 })
                 .finally(()=> {
-                    console.log("Aqui llego la promesa")
+                    setEstaCargando(false)
+                })*/ 
 
-                })
+
+            useEffect(()=> {
+                if(idCategoria){
+                    getProductsByCategory()
+                }else{
+                    getProducts()
+                }
+               
+
             }, [idCategoria])
 
 
@@ -42,7 +79,11 @@ export default function ItemListContainer({greeting}){
     
                 <div className='main'>
                     <h1 className='main__title'>{greeting}</h1>
-                     <ItemList productos={productos} />
+
+                     {
+                    estaCargando ? ( <Loading/>) : <ItemList productos={productos} />
+                     }
+                     
                 </div>
         
             )

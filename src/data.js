@@ -96,7 +96,7 @@ const productos = [
         imagen:"gravel1.jpg",
         descripcion:"La Scott Syncros es una bicicleta Gravel de alta gama diseñada para afrontar cualquier desafío en terrenos variados. Su cuadro de aluminio ligero está optimizado para resistir el desgaste de rutas irregulares, mientras que la horquilla de carbono reduce las vibraciones y mejora el confort. Equipado con una transmisión Shimano GRX 1x11, ofrece cambios rápidos y precisos, mientras que los frenos de disco hidráulicos garantizan una potencia de frenado excepcional en todas las condiciones meteorológicas. Ideal para aventureros que buscan rendimiento y fiabilidad en sus rutas.",
         categoria: "gravel",
-        stock: 1
+        stock: 2
     },
     {
         id:22,
@@ -188,7 +188,7 @@ const productos = [
         categoria: "ruta",
         stock: 1
     },
-    {
+    {//********************************** */
         id:53,
         nombre: "Bicicleta Specialized Carbon",
         precio:1000000,
