@@ -15,11 +15,15 @@ export default function ItemDetailContainer (){
 
     const {productoId} = useParams()
     const getProduct = async () =>{
-        const docRef = doc(db, "productos", productoId)
-        const dataDb = await getDoc(docRef)
-        const data = {id: dataDb.id, ...dataDb.data() }
+        try{
+            const docRef = doc(db, "productos", productoId)
+            const dataDb = await getDoc(docRef)
+            const data = {id: dataDb.id, ...dataDb.data() }
+            setProducto(data)
 
-        setProducto(data)
+        }catch(error){
+            console.log(error)
+        }
     }
 
 
@@ -27,7 +31,7 @@ export default function ItemDetailContainer (){
         getProduct()
        
     },[])   
-    
+
 
 
     return(

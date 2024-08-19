@@ -1,6 +1,5 @@
 import './itemList.css'
 import Banner2 from '../Banner2/Banner2.jsx'
-import Banner from '../Banner/Banner.jsx'
 import Item from '../Item/Item.jsx'
 
 
@@ -15,8 +14,7 @@ export default function ItemList ({productos}){
                 productos.map((producto) => (
                     <Item key={producto.id} producto={producto} />
                 ))
-                }     
-        <Banner/>                              
+                }                               
         </div>  
         
         </>    

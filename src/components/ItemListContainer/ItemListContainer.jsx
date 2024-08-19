@@ -18,46 +18,32 @@ export default function ItemListContainer({greeting}){
 
 
             const getProducts = async () => {
+                try{
                     const productosRef = collection(db, "productos")
                     const dataDb = await getDocs(productosRef) 
                     const data = dataDb.docs.map((productDb) => {
                         return{ id: productDb.id, ...productDb.data()}
-                        
                     })
                     setProductos(data)
+                }catch(error){
+                    console.log(error)
+                }
             }
 
 
             const getProductsByCategory = async () =>{
-                const productosRef = collection(db, "productos")
-                const q = query(productosRef, where("categoria", "==", idCategoria))
-                const dataDb = await getDocs(q)
-
-                const data = dataDb.docs.map((productDb) => {
-                    return{ id: productDb.id, ...productDb.data()}
-                    
-                })
-                setProductos(data)
+                try{
+                    const productosRef = collection(db, "productos")
+                    const q = query(productosRef, where("categoria", "==", idCategoria))
+                    const dataDb = await getDocs(q)
+                    const data = dataDb.docs.map((productDb) => {
+                        return{ id: productDb.id, ...productDb.data()} 
+                    })
+                    setProductos(data)
+                }catch(error){
+                    console.log(error)
+                }
             }
-
-
-
-              /*  setEstaCargando(true)
-                obtenerProductos()
-                .then((respuesta)=> {
-                    if(idCategoria){
-                        const productosFiltrados = respuesta.filter((producto) => producto.categoria === idCategoria)
-                        setProductos(productosFiltrados)
-                    }else{
-                        setProductos(respuesta)
-                    }
-                })
-                .catch((error)=> {
-                    console.error(error)
-                })
-                .finally(()=> {
-                    setEstaCargando(false)
-                })*/ 
 
 
             useEffect(()=> {
@@ -66,25 +52,14 @@ export default function ItemListContainer({greeting}){
                 }else{
                     getProducts()
                 }
-               
-
             }, [idCategoria])
 
-
-
-
-
-
             return(
-    
                 <div className='main'>
                     <h1 className='main__title'>{greeting}</h1>
-
                      {
                     estaCargando ? ( <Loading/>) : <ItemList productos={productos} />
                      }
-                     
                 </div>
-        
             )
 }
