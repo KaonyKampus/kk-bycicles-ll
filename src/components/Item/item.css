@@ -1,0 +1,62 @@
+.card{
+    padding-top: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-bottom: 1rem;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 600px;
+    border: 1px solid rgba(59, 59, 59, 0.068);
+    border-radius: 0.5rem;
+}
+
+.card:hover{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: rgb(0, 0, 0) 0px 10px 10px -10px;
+    background-color: rgba(56, 56, 56, 0.048);
+}
+
+.product__title{
+    
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.image__card{
+    border-radius: 0.5rem;
+    width: 50%;
+    height: 70%;
+}
+
+.precio__card{
+    padding: 0.5rem;
+}
+
+
+.detalle__producto{
+    text-decoration:  none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius:0.5rem ;
+}
+
+@media (max-width: 600px) {
+    .card{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 500px;
+        border: 1px solid rgba(59, 59, 59, 0.068);
+        border-radius: 0.5rem;
+    }
+}   

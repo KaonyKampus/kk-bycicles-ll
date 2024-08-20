@@ -4,6 +4,7 @@ import { CartContext } from "../../context/CartContext"
 import { Timestamp, addDoc, collection } from "firebase/firestore"
 import Form from "../Form/Form"
 import db from "../../db/db.js"
+import image from '../../assets/product_images/ciclista.avif'
 
 
 export default function CheckOut(){
@@ -53,8 +54,9 @@ export default function CheckOut(){
         {
           idOrden  ? (
           <div className="mensaje__orden">
-            <h2>¡Orden Completada Satisfactoriamente!</h2>
-            <p>Por favor guarda el ID de tu orden generada: {idOrden} </p>
+            <h2 className="orden__completada">🚲 ¡ Orden Completada Satisfactoriamente ! 🚲</h2>
+            <img src={image} alt="ciclista" className="image_check"/>
+            <p className="parrafo__recordatorio"><strong>⭐IMPORTANTE⭐</strong> Por favor guarda el ID de tu orden generada: <strong>{idOrden}</strong> </p>
           </div>) : (
             <Form  
             datosForm={datosForm} 

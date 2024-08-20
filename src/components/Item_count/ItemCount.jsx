@@ -1,5 +1,6 @@
 import './itemcount.css'
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 
 export default function ItemCount ({stock,agregarAlCarrito}){
     const [count, setCount] = useState(1)
@@ -10,7 +11,7 @@ export default function ItemCount ({stock,agregarAlCarrito}){
         } 
 
         if (count === stock){
-            alert("No se puede agregar más porque ha superado el stock") /*Agregar el norification desde la libreria*/
+            toast.error("Producto sin stock")/*Agregar el norification desde la libreria*/
         }
     }
 

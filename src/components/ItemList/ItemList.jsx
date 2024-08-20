@@ -1,6 +1,7 @@
 import './itemList.css'
 import Banner2 from '../Banner2/Banner2.jsx'
 import Item from '../Item/Item.jsx'
+import './itemList.css'
 
 
 
