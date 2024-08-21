@@ -21,7 +21,7 @@ function App() {
       <CartProvider>
         <NavBar/>
         <ToastContainer/>
-          <Routes theme='dark'>
+          <Routes theme="dark">
               <Route path="/" element={<ItemListContainer greeting =" ! Bienvenidos a KK-Bycicles ! "/>}/>
               <Route path="/categoria/:idCategoria" element={<ItemListContainer greeting =" ¡ Bienvenidos a KK-Bycicles !"/>}/>
               <Route path="/detalle/:productoId" element={<ItemDetailContainer/>}/>

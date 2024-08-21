@@ -1,6 +1,5 @@
 import './itemDetailContainer.css'
 import { useState,useEffect} from 'react'
-import obtenerProductos from '../../data'
 import ItemDetail from '../item_detail/ItemDetail.jsx'
 import { useParams } from 'react-router-dom'
 import Loading from '../componente_carga/Loading.jsx'

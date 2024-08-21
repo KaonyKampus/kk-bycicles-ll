@@ -5,6 +5,8 @@ import { Timestamp, addDoc, collection } from "firebase/firestore"
 import Form from "../Form/Form"
 import db from "../../db/db.js"
 import image from '../../assets/product_images/ciclista.avif'
+import validateForm from "../../utils/validacionFormulario.js"
+import { toast } from "react-toastify"
 
 
 export default function CheckOut(){
@@ -24,7 +26,7 @@ export default function CheckOut(){
 
     console.log(datosForm)
     
-    const handleSubmitForm = (event) =>{
+    const handleSubmitForm = async (event) =>{
         event.preventDefault()
 
         const orden = {
@@ -33,7 +35,14 @@ export default function CheckOut(){
             fecha: Timestamp.fromDate(new Date()),
             total: precioTotal()
         }
-        sendOrder(orden)
+
+        const response = await validateForm(datosForm)
+        if (response.status === "success"){
+            sendOrder(orden)
+        }else{
+            toast.warning(response.message)
+        }
+        
     }
 
     const sendOrder = async (orden) => {

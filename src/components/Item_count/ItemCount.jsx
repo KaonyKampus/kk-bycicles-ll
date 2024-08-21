@@ -11,7 +11,7 @@ export default function ItemCount ({stock,agregarAlCarrito}){
         } 
 
         if (count === stock){
-            toast.error("Producto sin stock")/*Agregar el norification desde la libreria*/
+            toast.error("Producto sin stock")
         }
     }
 

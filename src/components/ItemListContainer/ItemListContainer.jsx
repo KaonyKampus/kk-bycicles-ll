@@ -1,7 +1,6 @@
 import './itemlistcontainer.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
-/*import obtenerProductos from '../../data.js'*/
 import ItemList from '../ItemList/ItemList.jsx'
 import { useParams } from 'react-router-dom'
 import Loading from '../componente_carga/Loading.jsx'

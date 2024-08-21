@@ -1,8 +1,12 @@
-# React + Vite
+### KK bycicles 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KK Bicycles
+Descripción
+KK Bicycles es una simulación de una tienda de bicicletas, desarrollada para aplicar los conceptos generales de React. El proyecto permite a los usuarios explorar una variedad de productos, organizados por categorías, con la capacidad de agregar artículos a un carrito de compras y realizar el proceso de checkout. Esta aplicación demuestra la implementación de un Ecommerce utilizando React y otras tecnologías modernas.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Características
+Listado de productos con filtrado por categoría.
+Detalles de productos individuales.
+Funcionalidad de carrito de compras con persistencia de datos.
+Proceso de checkout para completar compras.
+Instalación
